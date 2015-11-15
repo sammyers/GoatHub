@@ -8,10 +8,10 @@ def index():
     # main page
     return render_template('index.html',
                            title='Home')
-@app.route('/about')
+@app.route('/rankings')
 def rankings():
     #Rankings page
-    return render_template('about.html',
+    return render_template('rankings.html',
                            title ='Home')
 
 @app.route('/about')
