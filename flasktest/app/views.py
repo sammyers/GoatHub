@@ -37,7 +37,17 @@ def rankings():
     global goats
     
     
-    return render_template('rankings.html')
+    return render_template('rankings.html',
+                            goatrank1 = goatrank1
+                            goatrank2 = goatrank2
+                            goatrank3 = goatrank3
+                            goatrank4 = goatrank4
+                            goatrank5 = goatrank5
+                            goatrank6 = goatrank6
+                            goatrank7 = goatrank7
+                            goatrank8 = goatrank8
+                            goatrank9 = goatrank9
+                            goatrank10 = goatrank10)
 
 @app.route('/about')
 def about():
