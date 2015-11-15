@@ -37,19 +37,10 @@ def index():
 def rankings():
     #Rankings page
     global goats
+    sorteddict = sorted(goats.items(), key=lambda e: e[1][1],reverse = True)
     
     
-    return render_template('rankings.html',
-                            goatrank1 = goatrank1
-                            goatrank2 = goatrank2
-                            goatrank3 = goatrank3
-                            goatrank4 = goatrank4
-                            goatrank5 = goatrank5
-                            goatrank6 = goatrank6
-                            goatrank7 = goatrank7
-                            goatrank8 = goatrank8
-                            goatrank9 = goatrank9
-                            goatrank10 = goatrank10)
+    return render_template('rankings.html')
 
 @app.route('/about')
 def about():

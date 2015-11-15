@@ -1,4 +1,4 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -9,7 +9,7 @@
     <meta name="author" content="">
      <link rel="icon" href="{{ url_for('static', filename='goat favicon github.png') }}">
 
-    <title>{{leftgoat}}</title>
+    <title>GoatHub</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
@@ -54,8 +54,6 @@
       </div>
     </nav>
 
-    <div class="container">
-
       <div class="starter-template">
         <h1>GoatHub</h1>
         <p class="lead">Vote for a goat!</p>
@@ -63,18 +61,23 @@
       </div>
 
 
-      <form action="/goatvote" method="post" id="Form">
-        <h2>Left Goat</h2>
-        <input type="image" src={{goaturl1}} alt="Left goat isn't here..." name="goatbutton" formmethod="post" formaction="/goatvote" value={{goatid1}}>
-      
-        <h2>Right Goat</h2>
-        <input type="image" src={{goaturl2}} alt="Right goat isn't here..." name="goatbutton" formmethod="post" formaction="/goatvote" value={{goatid2}}>
-      </form>
+    <table style="width:75%" align="center">
+      <tr>
+        <td align="center">
+        <form action="/goatvote" method="post" id="Form">
+          <h2></h2>
+          <input type="image" src={{goaturl1}} class = image-rounded alt="Left goat isn't here..." name="goatbutton" formmethod="post" formaction="/goatvote" value={{goatid1}} height = "600" width = "600">
+        </form>
+      </td>
+      <td align="center">
+        <form action="/goatvote" method="post" id="Form">
+          <h2></h2>
+          <input type="image" src={{goaturl2}} class = image-rounded  alt="Right goat isn't here..." name="goatbutton" formmethod="post" formaction="/goatvote" value={{goatid2}}  height = "600" width = "600" >
+        </form>
+        </td>
+      </tr>
 
-      
-
-    </div><!-- /.container -->
-
+    </table>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
