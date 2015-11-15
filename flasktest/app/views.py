@@ -85,25 +85,25 @@ def rankings():
     upgoats10 = votes[9]
 
     return render_template('rankings.html',
-                            goatrank1=goatrank1
-                            upgoats1=upgoats1
-                            goatrank2=goatrank2
-                            upgoats2=upgoats2
-                            goatrank3=goatrank3
-                            upgoats3=upgoats3
-                            goatrank4=goatrank4
-                            upgoats4=upgoats4
-                            goatrank5=goatrank5
-                            upgoats5=upgoats5
-                            goatrank6=goatrank6
-                            upgoats6=upgoats6
-                            goatrank7=goatrank7
-                            upgoats7=upgoats7
-                            goatrank8=goatrank8
-                            upgoats8=upgoats8
-                            goatrank9=goatrank9
-                            upgoats9=upgoats9
-                            goatrank10=goatrank10
+                            goatrank1=goatrank1,
+                            upgoats1=upgoats1,
+                            goatrank2=goatrank2,
+                            upgoats2=upgoats2,
+                            goatrank3=goatrank3,
+                            upgoats3=upgoats3,
+                            goatrank4=goatrank4,
+                            upgoats4=upgoats4,
+                            goatrank5=goatrank5,
+                            upgoats5=upgoats5,
+                            goatrank6=goatrank6,
+                            upgoats6=upgoats6,
+                            goatrank7=goatrank7,
+                            upgoats7=upgoats7,
+                            goatrank8=goatrank8,
+                            upgoats8=upgoats8,
+                            goatrank9=goatrank9,
+                            upgoats9=upgoats9,
+                            goatrank10=goatrank10,
                             upgoats10=upgoats10)
 
 
