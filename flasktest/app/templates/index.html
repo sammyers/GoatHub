@@ -32,7 +32,15 @@
   </head>
 
   <body>
+      <audio id="sound1" src="http://soundbible.com/mp3/Bleat-SoundBible.com-893851569.mp3"></audio>
 
+      <script type="text/javascript">
+      var audio1 = document.getElementById('sound1');
+      {
+        audio1.play();
+       
+      }
+      </script>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -58,27 +66,25 @@
         <h1>GoatHub</h1>
         <p class="lead">Vote for a goat!</p>
         <a href="rankings">Continue to the Goat Rankings</a>
-      </div>
-
-
-    <table style="width:75%" align="center">
-      <tr>
-        <td align="center">
+        <div class = "row">
+     <div class="col-md-6">
         <form action="/goatvote" method="post" id="Form">
           <h2></h2>
           <input type="image" src={{goaturl1}} class = image-rounded alt="Left goat isn't here..." name="goatbutton" formmethod="post" formaction="/goatvote" value={{goatid1}} height = "600" width = "600">
         </form>
-      </td>
-      <td align="center">
+      </div>
+      
+      <div class="col-md-6">
         <form action="/goatvote" method="post" id="Form">
           <h2></h2>
           <input type="image" src={{goaturl2}} class = image-rounded  alt="Right goat isn't here..." name="goatbutton" formmethod="post" formaction="/goatvote" value={{goatid2}}  height = "600" width = "600" >
         </form>
-        </td>
-      </tr>
+       </div>
+      </div>
 
-    </table>
+    
 
+   
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
