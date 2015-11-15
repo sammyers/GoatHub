@@ -3,6 +3,7 @@ from app import app
 import random
 import csv
 goats = {}
+leftgoat = 1
 with open('goats.csv','r') as csvfile:
     goatscsv = csv.reader(csvfile, delimiter=',', quotechar='|')
     for row in goatscsv:
@@ -26,9 +27,10 @@ def index():
     goaturl2= goatdic2[0]
     return render_template('index.html',
                            goatid1 = goatid1,
-                           goadid2 = goatid2,
+                           goatid2 = goatid2,
                            goaturl1 = goaturl1,
                            goaturl2 = goaturl2,
+                        
                            )
     
 @app.route('/rankings')
@@ -45,11 +47,10 @@ def about():
     return render_template('about.html')
 
 @app.route('/goatvote',methods = ['POST'])
-def goatvote1():
+def goatvote():
    
-    #executes on vote (left button). Name of goat buttons are goatbutton1, 
+    #executes on vote . Name of goat buttons are goatbutton, 
     goatid = int(request.form['goatbutton'])
-    
     goatentry = goats[goatid]
     goatentry[1] += 1
     goats[goatid] = goatentry
@@ -57,5 +58,3 @@ def goatvote1():
     
     
     return redirect('/')
-
-

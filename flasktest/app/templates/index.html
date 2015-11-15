@@ -9,7 +9,7 @@
     <meta name="author" content="">
      <link rel="icon" href="{{ url_for('static', filename='goat favicon github.png') }}">
 
-    <title>GoatHub</title>
+    <title>{{leftgoat}}</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
@@ -66,9 +66,7 @@
       <form action="/goatvote" method="post" id="Form">
         <h2>Left Goat</h2>
         <input type="image" src={{goaturl1}} alt="Left goat isn't here..." name="goatbutton" formmethod="post" formaction="/goatvote" value={{goatid1}}>
-      </form>
-
-      <form action="/goatvote" method="post" id="Form">
+      
         <h2>Right Goat</h2>
         <input type="image" src={{goaturl2}} alt="Right goat isn't here..." name="goatbutton" formmethod="post" formaction="/goatvote" value={{goatid2}}>
       </form>
