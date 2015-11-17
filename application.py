@@ -21,8 +21,6 @@ with open('goats.csv','r') as csvfile:
         goatrank = int(row[2])
         goats[goatvalue]= [goaturl,goatrank]
 
-print len(goats)
-
 @application.route('/')
 @application.route('/index')
 def index():
@@ -33,7 +31,7 @@ def index():
     goatdic1 = goats[goatid1]
     if goatid1 != goatid2:
         goatdic2 = goats[goatid2]
-    elif goatid != 100:
+    elif goatid2 != 100:
         goatdic2 = goats[goatid2 + 1]
     else:
     	goatdic2 = goats[goatid2 - 1]
