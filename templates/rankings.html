@@ -5,7 +5,7 @@
     {% include 'navbar.html' %}
     <div class="container">
       <div class="starter-template">
-        <p class="lead" style = "font-size:40px">G.O.A.T. (Greatest of All Time)</p>
+        <p class="lead" style="font-size:40px"><b>G.O.A.T. (Greatest of All Time)</b></p>
         <table class="jank-table" style="font-size:30px">
           <thead>
             <th>Rank</th>
@@ -17,7 +17,7 @@
             <tr>
               <td>{{loop.index}}</td>
               <td>
-                <img src= "{{goat.url}}" class="image-rounded" alt="Where is this goat?" width="300">
+                <img src= "{{goat.url}}" class="goat-vote-picture" alt="Where is this goat?" width="300">
               </td>
               <td>{{goat.votes}}</td>
             </tr>

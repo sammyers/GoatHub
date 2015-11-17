@@ -11,8 +11,8 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li {% if request.path=="/index" %}class="active"{% endif %}><a href="/index">Goat Vote</a></li>
-        <li {% if request.path=="/rankings" %}class="active"{% endif %}><a href="/rankings">Goat Rankings</a></li>
+        <li {% if request.path=="/" %}class="active"{% endif %}><a href="/">Vote</a></li>
+        <li {% if request.path=="/rankings" %}class="active"{% endif %}><a href="/rankings">Rankings</a></li>
         <li {% if request.path=="/about" %}class="active"{% endif %}><a href="/about">About</a></li>
       </ul>
     </div><!--/.nav-collapse -->
