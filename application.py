@@ -25,13 +25,13 @@ with open('goats.csv','r') as csvfile:
 @application.route('/index')
 def index():
     global goats
-    goatid1 = random.randrange(1,len(goats)+1,1)
-    goatid2 = random.randrange(1,len(goats)+1,1)
+    goatid1 = random.randrange(1,len(goats)-1,1)
+    goatid2 = random.randrange(1,len(goats)-1,1)
     # main page
     goatdic1 = goats[goatid1]
     if goatid1 != goatid2:
         goatdic2 = goats[goatid2]
-    elif goatid2 != 100:
+    elif goatid2 != len(goats) - 1:
         goatdic2 = goats[goatid2 + 1]
     else:
     	goatdic2 = goats[goatid2 - 1]
