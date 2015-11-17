@@ -20,11 +20,11 @@ application.secret_key = 'c6qNFknUx3zp8BXSCf16P++rzGMu+L8SmjPMJE1c3'
 def index():
     goats = Goat.query.all()
 
-    left_goat_id = random.randrange(1,len(goats)-1,1)
-    right_goat_id = random.randrange(1,len(goats)-1,1)
+    left_goat_id = random.randrange(0,len(goats),1)
+    right_goat_id = random.randrange(0,len(goats),1)
 
     while left_goat_id == right_goat_id:
-        right_goat_id = random.randrange(1,len(goats)-1,1)
+        right_goat_id = random.randrange(0,len(goats),1)
 
     left_goat = goats[left_goat_id]
     right_goat = goats[right_goat_id]
