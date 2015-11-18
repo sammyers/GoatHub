@@ -7,10 +7,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a>
-        <img src="{{ url_for('static', filename='favicon-194x194.png') }}"class="goathub-navbar-brand goathub-logo" href="/"/>
+      <a href="/">
+        <img src="{{ url_for('static', filename='favicon-grey.png') }}" onmouseover="this.src='{{ url_for('static', filename='favicon-white.png') }}'" onmouseout="this.src='{{ url_for('static', filename='favicon-grey.png') }}'"class="goathub-navbar-brand goathub-logo"/>
       </a>
-      <a class="navbar-brand goathub-logo" href="/">GoatHub</a> 
+      <a class="goathub-navbar goathub-logo">GoatHub</a> 
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
