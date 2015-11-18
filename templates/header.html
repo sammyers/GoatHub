@@ -5,7 +5,26 @@
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}">
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ url_for('static', filename='apple-touch-icon-57x57.png') }}?v=kPPR98bOXR">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ url_for('static', filename='apple-touch-icon-60x60.png') }}?v=kPPR98bOXR">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='apple-touch-icon-72x72.png') }}?v=kPPR98bOXR">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='apple-touch-icon-76x76.png') }}?v=kPPR98bOXR">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='apple-touch-icon-114x114.png') }}?v=kPPR98bOXR">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='apple-touch-icon-120x120.png') }}?v=kPPR98bOXR">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='apple-touch-icon-144x144.png') }}?v=kPPR98bOXR">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='apple-touch-icon-152x152.png') }}?v=kPPR98bOXR">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon-180x180.png') }}?v=kPPR98bOXR">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon-32x32.png') }}?v=kPPR98bOXR" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon-194x194.png') }}?v=kPPR98bOXR" sizes="194x194">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon-96x96.png') }}?v=kPPR98bOXR" sizes="96x96">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='android-chrome-192x192.png') }}?v=kPPR98bOXR" sizes="192x192">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon-16x16.png') }}?v=kPPR98bOXR" sizes="16x16">
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}?v=kPPR98bOXR">
+  <link rel="mask-icon" href="{{ url_for('static', filename='safari-pinned-tab.svg') }}?v=kPPR98bOXR" color="#5bbad5">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}?v=kPPR98bOXR">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="msapplication-TileImage" content="{{ url_for('static', filename='mstile-144x144.png') }}?v=kPPR98bOXR">
+  <meta name="theme-color" content="#ffffff">
 
   <title>GoatHub</title>
 
@@ -36,6 +55,13 @@
       text-align: center;
       font-size: 40px;
       margin: 30px;
+    }
+
+    .goathub-navbar-brand {
+      float: left;
+      height: 50px;
+      padding: 8px 8px;
+      margin-right: 7.5px;
     }
 
     .goat-vote-picture {
