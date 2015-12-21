@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, flash, session, url_for
 from application import db
-from application.models import Goat
-from application.forms import EnterDBInfo, RetrieveDBInfo
+from application.models import Goat, Submission
+from application.forms import SubmissionForm
 import random
 import csv
 
@@ -62,6 +62,20 @@ def goatvote():
     db.session.commit()
         
     return redirect('/')
+
+@application.route('/submissions', methods=['GET','POST'])
+def submissions():
+	form = SubmissionForm()
+
+	if form.validate_on_submit():
+		submission = Submission(form.url.data)
+		form.url.data = ''
+		db.session.add(submission)
+		db.session.commit()
+		flash('Goat image at {} uploaded for review'.format(form.url.data))
+		return redirect(url_for('submissions'))
+
+	return render_template('submissions.html', form=form)
 
 if __name__ == '__main__':
     application.run(host='0.0.0.0')

@@ -10,12 +10,13 @@
       <a href="/">
         <img src="{{ url_for('static', filename='favicon-grey.png') }}" onmouseover="this.src='{{ url_for('static', filename='favicon-white.png') }}'" onmouseout="this.src='{{ url_for('static', filename='favicon-grey.png') }}'"class="goathub-navbar-brand goathub-logo"/>
       </a>
-      <a class="goathub-navbar goathub-logo">GoatHub</a> 
+      <a class="goathub-navbar goathub-logo"><b>GoatHub</b></a> 
     </div>
-    <div id="navbar" class="collapse navbar-collapse">
+    <div id="navbar" class="collapse navbar-collapse" style="font-size:15px">
       <ul class="nav navbar-nav">
         <li {% if request.path=="/" %}class="active"{% endif %}><a href="/">Vote</a></li>
         <li {% if request.path=="/rankings" %}class="active"{% endif %}><a href="/rankings">Rankings</a></li>
+        {# <li {% if request.path=="/submissions" %}class="active"{% endif %}><a href="/submissions">Submit</a></li> #}
         <li {% if request.path=="/about" %}class="active"{% endif %}><a href="/about">About</a></li>
       </ul>
     </div><!--/.nav-collapse -->
